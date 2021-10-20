@@ -29,5 +29,5 @@
   source: pull
 # Creates the number of containers defined by the variable create_containers, using default values
 - name: Create default containers
-  docker_container: name: "{{ default_container_name }}{{ item }}" image: "{{ default_container_image }}" command: "{{ default_container_command }}" state: present
+  docker_container: name="{{ default_container_name }}{{ item }}" image: "{{ default_container_image }}" command: "{{ default_container_command }}" state: present
     with_sequence: count={{ create_containers }}
