@@ -1,6 +1,6 @@
 ---
 - hosts: all
-become: true
-tasks:
- - name: deloy docker image
-   shell: docker run -d -p 8081:80 staskuznetsov/app1:latest
+- become: true
+  tasks:
+   - name: deloy docker image
+     shell: docker run -d -p 8081:80 staskuznetsov/app1:latest
