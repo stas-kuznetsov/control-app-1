@@ -8,13 +8,13 @@ default_container_image: staskuznetsov/app1:latest
 default_container_command: sleep 1d
 tasks:
 - name: Install aptitude using apt
-apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
+  apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
 - name: Install required system packages
-apt: name={{ item }} state=latest update_cache=yes
-loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools'] - name: Add Docker GPG apt Key
-apt_key:
-url: https://download.docker.com/linux/ubuntu/gpg
-state: present
+  apt: name={{ item }} state=latest update_cache=yes
+  loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools'] - name: Add Docker GPG apt Key
+  apt_key:
+  url: https://download.docker.com/linux/ubuntu/gpg
+  state: present
 - name: Add Docker Repository
 apt_repository:
 repo: deb https://download.docker.com/linux/ubuntu bionic stable
