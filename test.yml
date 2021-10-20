@@ -2,4 +2,4 @@
 - hosts: all
   become: true
   tasks:
-  shell: docker run -d -p 8081:80 staskuznetsov/app1:latest
+    shell: docker run -d -p 8081:80 staskuznetsov/app1:latest
