@@ -1,8 +1,8 @@
 ---
 - hosts: all
-become: true
-tasks:
- - name: deploy Docker container image from DockerHub
-    image: staskuznetsov/app1:latest
-    ports:
-      - "80:8001"
+  become: true
+  tasks:
+   - name: deploy Docker container image from DockerHub
+      image: staskuznetsov/app1:latest
+      ports:
+       - "80:8001"
