@@ -14,7 +14,7 @@
 #- name: Install Docker Module for Python
 #  pip: name=docker
 - name: Pull Docker image
-  docker_image: name=staskuznetsov/app1:$BUILD_NUMBER source=pull
+  docker_image: name=staskuznetsov/app1 source=pull
 - name: Deploy new container image
   docker_container: image=staskuznetsov/app1 state=present
 
