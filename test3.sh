@@ -1,4 +1,4 @@
 
 pwd
-ls -al control-app-1
+cat control-app-1/deploy.sh
 
