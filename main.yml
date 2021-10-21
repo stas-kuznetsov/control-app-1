@@ -22,6 +22,5 @@
 #- name: Pull Docker image
 #  docker_image: name=staskuznetsov/app1 source=pull
 - name: Deploy new container image
-  name: staskuznetsov/app1:$BUILD_NUMBER
-  docker_container:  name=staskuznetsov/app1:$BUILD_NUMBER image=staskuznetsov/app1:$BUILD_NUMBER   state=present
+  docker_container:  name=staskuznetsov/app1 image=staskuznetsov/app1:latest   state=present
 
