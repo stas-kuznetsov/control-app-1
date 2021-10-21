@@ -1,8 +1,9 @@
 ---
-- name: Delete old container
-  shell: docker rmi -f staskuznetsov/app1
-  ignore_errors: true
-- name: Deploy new container image from DockerHub
-  shell: docker pull staskuznetsov/app1:$BUILD_NUMBER
-  shell: docker run -d -p 8081:80 staskuznetsov/app1:$BUILD_NUMBER
-
+- name: Pull Docker image
+  docker_image:
+  name: staskuznetsov/app1:$BUILD_NUMBER
+  source: pull
+- name: Deploy new container image
+  docker_container:
+  image: staskuznetsov/app1
+  state: present
