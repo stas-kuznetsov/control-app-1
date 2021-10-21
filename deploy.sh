@@ -4,9 +4,10 @@ username=jenkins
 
 ssh $username@$IPadr << EOF
 
-if [ "(docker ps -a)" != "" ]
+if [ "(docker ps -a -q)" != "" ]
   then
-    docker rm -f $(docker ps -a -q)
+    docker stop $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
 fi
 
 
