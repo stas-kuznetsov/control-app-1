@@ -19,8 +19,8 @@
 - name: Delete old version of Docker image
   shell: rmi staskuznetsov/app1
   ignore_errors: true
-- name: Pull Docker image
-  docker_image: name=staskuznetsov/app1 source=pull
+#- name: Pull Docker image
+#  docker_image: name=staskuznetsov/app1 source=pull
 - name: Deploy new container image
   docker_container: image=staskuznetsov/app1 state=present
 
