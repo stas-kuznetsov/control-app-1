@@ -1,8 +1,0 @@
----
-- hosts: deploy
-- become: true
-  tasks:
-   - name: delete old container image
-     shell: docker rmi -f staskuznetsov/app1
-   - name: deloy docker image
-     shell: docker run -d -p 8081:80 staskuznetsov/app1:latest

@@ -1,0 +1,6 @@
+---
+- name: Deploy container image Docker from DockerHub
+  hosts: all
+  become: yes
+  roles:
+    - app1-role
