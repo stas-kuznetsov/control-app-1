@@ -3,4 +3,5 @@
   shell: docker rmi -f staskuznetsov/app1
   ignore_errors: true
 - name: Deploy new container image from DockerHub
+  shell: docker pull staskuznetsov/app1:$BUILD_NUMBER
   shell: docker run -d -p 8081:80 staskuznetsov/app1
