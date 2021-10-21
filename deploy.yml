@@ -1,7 +1,0 @@
----
-- name: Deploy container image Docker from DockerHub
-  hosts: all
-  become: yes
-  remote_user: jenkins
-  roles:
-    - app1-role
