@@ -3,7 +3,8 @@ IPadr=192.168.1.101
 username=jenkins
 
 ssh $username@$IPadr << EOF
-if [ "docker ps -a" -ne NULL ]
+
+if [ "(docker ps -a)" != "" ]
   then
     docker rm -f $(docker ps -a -q)
 fi
