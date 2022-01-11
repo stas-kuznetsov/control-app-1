@@ -1,2 +1,2 @@
 
-docker push staskuznetsov/petclinic:$BUILD_NUMBER
+docker push staskuznetsov/app1:$BUILD_NUMBER
